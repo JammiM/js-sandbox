@@ -62,7 +62,9 @@
           `audio[data-key="${event.keyCode}"]`
         );
 
-        console.log(audioFile);
+        if (!audioFile) return;
+        audioFile.currentTime = 0;
+        audioFile.play();
       });
     </script>
   </body>
