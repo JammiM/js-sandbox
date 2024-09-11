@@ -56,6 +56,14 @@
     <audio data-key="75" src="sounds/tom.wav"></audio>
     <audio data-key="76" src="sounds/tink.wav"></audio>
 
-    <script></script>
+    <script>
+      window.addEventListener("keydown", function (event) {
+        const audioFile = document.querySelector(
+          `audio[data-key="${event.keyCode}"]`
+        );
+
+        console.log(audioFile);
+      });
+    </script>
   </body>
 </html>
