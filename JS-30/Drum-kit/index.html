@@ -69,6 +69,17 @@
         const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
         key.classList.add("playing");
       });
+
+      const keys = document.querySelectorAll(".key");
+
+      keys.forEach((key) =>
+        key.addEventListener("transitionend", removeTransition)
+      );
+
+      function removeTransition(event) {
+        if (event.propertyName !== "transform") return;
+        this.classList.remove("playing");
+      }
     </script>
   </body>
 </html>
