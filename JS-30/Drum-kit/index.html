@@ -65,6 +65,9 @@
         if (!audioFile) return;
         audioFile.currentTime = 0;
         audioFile.play();
+
+        const key = document.querySelector(`.key[data-key="${event.keyCode}"]`);
+        key.classList.add("playing");
       });
     </script>
   </body>
