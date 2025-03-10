@@ -1,0 +1,11 @@
+:root {
+  --main-color: #6495ed;
+  --blur: 3.5px;
+  --space: 10px;
+}
+
+.image {
+  padding: var(--space);
+  background-color: var(--main-color, blue);
+  filter: blur(var(--blur));
+}
